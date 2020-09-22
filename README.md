@@ -1,3 +1,5 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Enable console add DBGConsoleOn=true in bin\config\base\general.ini 
 
 TextureMipBias=0 (was -1) in Documents\The Witcher 3\user.settings
