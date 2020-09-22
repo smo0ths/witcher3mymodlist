@@ -2,7 +2,7 @@
 
 Enable console add DBGConsoleOn=true in bin\config\base\general.ini 
 
-TextureMipBias=0 (was -1) in Documents\The Witcher 3\user.settings
+set Ultra textures then add TextureMipBias=0 under [Rendering] in Documents\The Witcher 3\user.settings
 
 .xml goes in user_config_matrix\pc folder
 
@@ -29,6 +29,9 @@ https://www.nexusmods.com/witcher3/mods/1710
 modAbsoluteHorseControl / input.settings changes
 https://www.nexusmods.com/witcher3/mods/1411
 
+modExtendedViewDistanceNonAO_VanillaWater
+https://www.nexusmods.com/witcher3/mods/3082
+
 modFastTravelFromRoach
 https://www.nexusmods.com/witcher3/mods/1684
 
@@ -43,9 +46,6 @@ https://www.nexusmods.com/witcher3/mods/519
 
 modz_noplayerlight
 https://www.nexusmods.com/witcher3/mods/2414
-
-modMixedMoreNewClouds
-https://www.nexusmods.com/witcher3/mods/3315
 
 modNoQuickSaveMessage
 https://www.nexusmods.com/witcher3/mods/4948
