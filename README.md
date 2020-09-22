@@ -8,7 +8,7 @@ TextureMipBias=0 (was -1) in Documents\The Witcher 3\user.settings
 
 merge the edited code correctly should be easy enough just select the edited code to the merged from A or B files, absolute camera requires new code i edited below 
 
-modAbsoluteCamera31 / modAbsoluteCameraMenu.xml / user.settings adds / Script Merger / LINE 3860ish of r4Player.ws conflict: if ( theGame.IsFocusModeActive() && aCamera.IsOn && theGame.GetInGameConfigWrapper().GetVarValue('FriendlyFocus', 'ffEnableZoomEffect'))
+modAbsoluteCamera31 / modAbsoluteCameraMenu.xml / Script Merger / LINE 3860ish of r4Player.ws conflict: if ( theGame.IsFocusModeActive() && aCamera.IsOn && theGame.GetInGameConfigWrapper().GetVarValue('FriendlyFocus', 'ffEnableZoomEffect'))
 https://www.nexusmods.com/witcher3/mods/856
 
 modZColorfulActionLog / Script Merger 
@@ -23,7 +23,7 @@ https://www.nexusmods.com/witcher3/mods/4261
 modAutoLootMenu / AHDAutoLootConfig.xml 
 https://www.nexusmods.com/witcher3/mods/1996
 
-modSortEverything / modSortEverything.xml / user.settings adds
+modSortEverything / modSortEverything.xml
 https://www.nexusmods.com/witcher3/mods/1710
 
 modAbsoluteHorseControl / input.settings changes
