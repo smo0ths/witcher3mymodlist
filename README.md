@@ -19,11 +19,11 @@ dx12user.settings/user.settings added:
 DisableBigCameraLights=true    (add)
 DisableSmallCameraLights=true  (add)
 DisableAllCameraLights=true    (add)
-TextureMipBias=0               (changed disappears when 0)
+TextureMipBias=0               (changed, disappears when 0)
 MaxTextureAnizotropy=8         (changed)
 [Streaming/Textures]           (find)
 UseMipRefiner=true             (add)
-CinematicModeMipBias=0         (changed disappears when 0)
+CinematicModeMipBias=0         (changed, disappears when 0)
 ```
 
 
