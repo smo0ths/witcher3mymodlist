@@ -15,7 +15,7 @@ DisableVideos=true
 dx12user.settings/user.settings added:
 
 ```python
-[Rendering]
+[Rendering]    (find)
 DisableBigCameraLights=true
 DisableSmallCameraLights=true
 DisableAllCameraLights=true
