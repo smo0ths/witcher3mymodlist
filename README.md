@@ -14,12 +14,13 @@ DisableVideos=true
 
 dx12user.settings/user.settings added:
 
+```python
 [Rendering]
 DisableBigCameraLights=true
 DisableSmallCameraLights=true
 DisableAllCameraLights=true
 TextureMipBias=0    (changed)
-
+```
 
 ### mods
 
