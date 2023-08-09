@@ -1,5 +1,4 @@
-#### updated 8/4/23
-### 0 merge conflics with v4.04
+#### updated 8/8/23
 
 
 general.ini added:
@@ -12,6 +11,16 @@ engine.ini added:
 [LoadingScreen/Debug]
 DisableVideos=true
 ```
+
+dx12user.settings/user.settings added:
+
+[Rendering]
+DisableBigCameraLights=true
+DisableSmallCameraLights=true
+DisableAllCameraLights=true
+TextureMipBias=0    (changed)
+
+
 ### mods
 
 ```python
@@ -23,6 +32,7 @@ modBetterThanIconsFull_ENG
 modColoredMapMarkers_AQO   (set priority over AQO)
 modContainerGlow
 modDisableFallDMG
+modDisableSoftLock
 modEnhancedCloseCamera
 modEnhancedHerbalism
 modEqualPrice
@@ -42,19 +52,7 @@ modSXPM
 modTheTwoGwentStoresNG
 modTurnOnTheLights
 modUltraGore2NG
-```
-
----
-
-### also
-
-containerglow.xml makes mod menu words invisible so you fix it with this:
-
-```python
-fix
-<Group id="ModContainerGlow" displayName="Mods.lego.containerglow">
-was
-<Group id="ModContainerGlow" displayName="Mods.lego.containerglow" tags="customNames;customDisplayName">
+modUnlimitedDurability
 ```
 
 ---
