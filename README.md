@@ -1,4 +1,4 @@
-#### updated 8/8/23
+#### updated 8/9/23
 
 
 general.ini added:
@@ -15,12 +15,18 @@ DisableVideos=true
 dx12user.settings/user.settings added:
 
 ```python
-[Rendering]    (find)
-DisableBigCameraLights=true
-DisableSmallCameraLights=true
-DisableAllCameraLights=true
-TextureMipBias=0    (changed)
+[Rendering]                    (find)
+DisableBigCameraLights=true    (add)
+DisableSmallCameraLights=true  (add)
+DisableAllCameraLights=true    (add)
+TextureMipBias=0               (changed disappears when 0)
+MaxTextureAnizotropy=8         (changed)
+[Streaming/Textures]           (find)
+UseMipRefiner=true             (add)
+CinematicModeMipBias=0         (changed disappears when 0)
 ```
+
+
 
 ### mods
 
