@@ -1,4 +1,4 @@
-#### updated 8/9/23
+#### updated 8/12/23
 
 
 general.ini added:
@@ -31,7 +31,6 @@ CinematicModeMipBias=0         (changed, disappears when 0)
 ### mods
 
 ```python
-modAutoConsumeFoodMenu
 modAutoEnhanceGearMenu
 modAutoLootMenu
 modBaseHorseControlsCE
@@ -47,7 +46,9 @@ modFishlungForeverDiveNG
 modFTFA
 modGermaniaOne
 modGwent-max_bet5000
+modhealthren   (Noncombat Health Regen)
 modHideSaveMessageNG_v404
+modhpregen   (Noncombat Health Regen)
 modMapQuestObjectivesFull
 modMissingCardTracker
 modMoreMoneyForTraders
@@ -61,5 +62,12 @@ modTurnOnTheLights
 modUltraGore2NG
 modUnlimitedDurability
 ```
+
+---
+
+want ect:
+teleport to map pin   (the old simple mod)
+Extend Potion Duration   (this one just needs an update)
+make links and shortcuts
 
 ---
