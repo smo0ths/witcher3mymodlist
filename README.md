@@ -65,9 +65,11 @@ modUnlimitedDurability
 
 ---
 
-want ect:
+eventually:
+```python
 teleport to map pin   (the old simple mod)
 Extend Potion Duration   (this one just needs an update)
-make links and shortcuts
+add links
+```
 
 ---
