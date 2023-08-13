@@ -1,4 +1,4 @@
-#### updated 8/12/23
+#### updated 8/13/23
 
 
 general.ini added:
@@ -26,7 +26,47 @@ UseMipRefiner=true             (add)
 CinematicModeMipBias=0         (changed, disappears when 0)
 ```
 
+latest modAutoLootMenu v4.3.3 has merge conflicts in r4Player.ws with modEnhancedCloseCamera here is the fix:
 
+```python
+below starting at line 15261* copy/paste
+	//+++EnhancedCloseCamera+++
+	public var EnhancedCloseCamera : CEnhancedCloseCamera;
+	
+	public function GetEnhancedCloseCamera(): CEnhancedCloseCamera
+	{
+		return EnhancedCloseCamera;
+	}
+	
+	timer function EnableCameraShake(dt : float, id : int)
+	{
+		if (GetEnhancedCloseCamera().GetCameraShake())
+		{
+			GetEnhancedCloseCamera().StartCameraShake();
+		}
+		else if (GetEnhancedCloseCamera().IsCameraShakeActive())
+		{
+			GetEnhancedCloseCamera().StopCameraShake();
+		}
+	}
+	//---EnhancedCloseCamera---
+	timer function InitAHDAutoLoot(dt : float, id : int) // AutoLootMenu++ IMPORTANT DO NOT CHANGE
+	{
+		GetAutoLootConfig().InitAutoLootConfig();
+		GetAutoLootNotificationManager().Reset();
+	}
+	
+	public function GetAutoLootConfig() : CAHDAutoLootConfig { return AutoLootConfig; }
+	public function GetAutoLootNotificationManager() : CAHDAutoLootNotificationManager { return AutoLootNotificationManager; }
+	
+	timer function TrueAutoLootMode( dt : float, id : int )
+	{
+		GetAutoLootConfig().GetFeatureManager().TryAreaLooting("true_autoloot_mode");
+		AddTimer('TrueAutoLootMode', GetAutoLootConfig().GetTrueAutoLootTime());
+	}// AutoLootMenu-- IMPORTANT DO NOT CHANGE
+}
+above ending at line 15295*
+```
 
 ### mods
 
