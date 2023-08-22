@@ -1,4 +1,4 @@
-#### updated 8/22/23
+#### updated 8/22/23~ removed 1 added 2 mods
 
 
 general.ini added:
@@ -28,7 +28,7 @@ UseMipRefiner=true             (add)
 latest modAutoLootMenu v4.3.4 has merge conflicts in r4Player.ws with modEnhancedCloseCamera here is the fix:
 
 ```python
-line 15261~ copy/paste
+line 15522 copy/paste
 	//+++EnhancedCloseCamera+++
 	public var EnhancedCloseCamera : CEnhancedCloseCamera;
 	
@@ -64,7 +64,7 @@ line 15261~ copy/paste
 		AddTimer('TrueAutoLootMode', GetAutoLootConfig().GetTrueAutoLootTime());
 	}// AutoLootMenu-- IMPORTANT DO NOT CHANGE
 }
-ending at line 15295~
+ending at line 15556
 ```
 
 ### mods
@@ -77,9 +77,9 @@ modBetterThanIconsFull_ENG
 modColoredMapMarkers_AQO   (set priority over AQO)
 modContainerGlow
 modDisableFallDMG
-modDisableSoftLock
 modEnhancedCloseCamera
 modEnhancedHerbalism
+modEnhancedTargeting
 modEqualPrice
 modFishlungForeverDiveNG
 modFTFA
@@ -94,7 +94,8 @@ modMoreMoneyForTraders
 modMultipleQuickSave
 modNTakTime
 modPJ002_BalancedITMLVLs
-modSortEverything
+modSmoothGUI
+modSortEverything   (set priority over SmoothGUI)
 modSXPM
 modTheTwoGwentStoresNG
 modTurnOnTheLights
