@@ -1,4 +1,4 @@
-#### updated 8/13/23
+#### updated 8/22/23
 
 
 general.ini added:
@@ -17,19 +17,18 @@ dx12user.settings/user.settings added:
 ```python
 [Rendering]                    (find)
 DisableBigCameraLights=true    (add)
-DisableSmallCameraLights=true  (add)
-DisableAllCameraLights=true    (add)
-TextureMipBias=0               (changed, disappears when 0)
-MaxTextureAnizotropy=8         (changed)
+DisableSmallCameraLights=false (add)
+DisableAllCameraLights=false   (add)
+
 [Streaming/Textures]           (find)
+CinematicModeMipBias=-1        (changed)
 UseMipRefiner=true             (add)
-CinematicModeMipBias=0         (changed, disappears when 0)
 ```
 
 latest modAutoLootMenu v4.3.3 has merge conflicts in r4Player.ws with modEnhancedCloseCamera here is the fix:
 
 ```python
-below starting at line 15261* copy/paste
+line 15261~ copy/paste
 	//+++EnhancedCloseCamera+++
 	public var EnhancedCloseCamera : CEnhancedCloseCamera;
 	
@@ -65,7 +64,7 @@ below starting at line 15261* copy/paste
 		AddTimer('TrueAutoLootMode', GetAutoLootConfig().GetTrueAutoLootTime());
 	}// AutoLootMenu-- IMPORTANT DO NOT CHANGE
 }
-above ending at line 15295*
+ending at line 15295~
 ```
 
 ### mods
