@@ -25,7 +25,7 @@ CinematicModeMipBias=-1        (changed)
 UseMipRefiner=true             (add)
 ```
 
-latest modAutoLootMenu v4.3.3 has merge conflicts in r4Player.ws with modEnhancedCloseCamera here is the fix:
+latest modAutoLootMenu v4.3.4 has merge conflicts in r4Player.ws with modEnhancedCloseCamera here is the fix:
 
 ```python
 line 15261~ copy/paste
