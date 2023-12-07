@@ -1,5 +1,10 @@
-#### updated 8/22/23~ removed 1 added 2 mods
+#### updated 12/7/23
 
+##### 1440p scaling (DLSS/FSR2/TAAU/XeSS) 58%/67%/70% resolution scale (balance/quality) -1/-0.5 (recommended negative LOD bias)
+
+##### 4k scaling (DLSS/FSR2/TAAU/XeSS) 50% resolution scale (performance) -1.5/-1 (recommended negative LOD bias)
+
+---
 
 general.ini added:
 ```python
@@ -12,6 +17,8 @@ engine.ini added:
 DisableVideos=true
 ```
 
+---
+
 dx12user.settings/user.settings added:
 
 ```python
@@ -19,60 +26,20 @@ dx12user.settings/user.settings added:
 DisableBigCameraLights=true    (add)
 DisableSmallCameraLights=false (add)
 DisableAllCameraLights=false   (add)
+TextureMipBias=-1.5            (changed)
 
 [Streaming/Textures]           (find)
-CinematicModeMipBias=-1        (changed)
-UseMipRefiner=true             (add)
+CinematicModeMipBias=-1.5      (changed)
+UseMipRefiner=false            (add cost 12 fps if true)
 ```
 
-latest modAutoLootMenu v4.3.4 has merge conflicts in r4Player.ws with modEnhancedCloseCamera here is the fix:
-
-```python
-line 15522 copy/paste
-	//+++EnhancedCloseCamera+++
-	public var EnhancedCloseCamera : CEnhancedCloseCamera;
-	
-	public function GetEnhancedCloseCamera(): CEnhancedCloseCamera
-	{
-		return EnhancedCloseCamera;
-	}
-	
-	timer function EnableCameraShake(dt : float, id : int)
-	{
-		if (GetEnhancedCloseCamera().GetCameraShake())
-		{
-			GetEnhancedCloseCamera().StartCameraShake();
-		}
-		else if (GetEnhancedCloseCamera().IsCameraShakeActive())
-		{
-			GetEnhancedCloseCamera().StopCameraShake();
-		}
-	}
-	//---EnhancedCloseCamera---
-	timer function InitAHDAutoLoot(dt : float, id : int) // AutoLootMenu++ IMPORTANT DO NOT CHANGE
-	{
-		GetAutoLootConfig().InitAutoLootConfig();
-		GetAutoLootNotificationManager().Reset();
-	}
-	
-	public function GetAutoLootConfig() : CAHDAutoLootConfig { return AutoLootConfig; }
-	public function GetAutoLootNotificationManager() : CAHDAutoLootNotificationManager { return AutoLootNotificationManager; }
-	
-	timer function TrueAutoLootMode( dt : float, id : int )
-	{
-		GetAutoLootConfig().GetFeatureManager().TryAreaLooting("true_autoloot_mode");
-		AddTimer('TrueAutoLootMode', GetAutoLootConfig().GetTrueAutoLootTime());
-	}// AutoLootMenu-- IMPORTANT DO NOT CHANGE
-}
-ending at line 15556
-```
+---
 
 ### mods
 
 ```python
 modAutoEnhanceGearMenu
 modAutoLootMenu
-modBaseHorseControlsCE
 modBetterThanIconsFull_ENG
 modColoredMapMarkers_AQO   (set priority over AQO)
 modContainerGlow
@@ -85,9 +52,8 @@ modFishlungForeverDiveNG
 modFTFA
 modGermaniaOne
 modGwent-max_bet5000
-modhealthren   (Noncombat Health Regen)
 modHideSaveMessageNG_v404
-modhpregen   (Noncombat Health Regen)
+modImprovedHorseControls
 modMapQuestObjectivesFull
 modMissingCardTracker
 modMoreMoneyForTraders
@@ -96,20 +62,11 @@ modNTakTime
 modPJ002_BalancedITMLVLs
 modSmoothGUI
 modSortEverything   (set priority over SmoothGUI)
+modstackpotionsdurationbonus
 modSXPM
 modTheTwoGwentStoresNG
-modTurnOnTheLights
+modTurnOnTheLights   (bugs out quest where you manually light things)
+modTweaks
 modUltraGore2NG
 modUnlimitedDurability
 ```
-
----
-
-eventually:
-```python
-teleport to map pin   (the old simple mod)
-Extend Potion Duration   (this one just needs an update)
-add links
-```
-
----
